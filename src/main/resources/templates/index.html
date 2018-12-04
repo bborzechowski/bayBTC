@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>bayBTC</title>
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="css/starter-template.css" rel="stylesheet">
+
+</head>
+<body class="bodyy" background="img/493.jpg"   >
+<div style="text-align: center;">
+    <h1>Kursy Kryptowalut</h1>
+
+</div>
+
+<div style="text-align: left;">
+    <span class="badge badge-pill badge-primary">Wybierz kryptowalutę</span>
+
+<form method="post" action="/">
+    <!--  <input type="checkbox" name="cryptocurrency" value="eth">
+      <input type="submit" value="Wyślij">   -->
+    <select  class="btn btn-outline-primary" name="cryptocurrency"  >
+        <option>BTC</option>
+        <option>BCC</option>
+        <option>LTC</option>
+        <option>ETH</option>
+        <option>LSK</option>
+        <option>GAME</option>
+        <option>DASH</option>
+        <option>BTG</option>
+        <option>KZC</option>
+        <option>XIN</option>
+        <option>XRP</option>
+        <option>XMR</option>
+        <option>ZEC</option>
+        <option>GNT</option>
+
+    </select>
+
+    <input type="submit" class="btn btn-primary"></input>
+
+
+
+</form>
+
+<main role="main" class="container">
+    <table class="table table-striped " >
+        <thead>
+        <tr>
+        <th>Kupno</th>
+        <th>               </th>
+        <th>Sprzedaż</th>
+            <th>               </th>
+            <th>cena minimalna(24h)</th>
+            <th>               </th>
+            <th>cena maksymalna(24h)</th>
+            <th>               </th>
+            <th>cena średnia ważona(24h)</th>
+            <th>               </th>
+            <th>wolumen</th>
+    </tr>
+    <tr>
+        <td th:text="${bids}"</td>
+        <td>               </td>
+        <td th:text="${asks}"</td>
+        <td>               </td>
+        <td th:text="${min}"</td>
+        <td>               </td>
+        <td th:text="${max}"</td>
+        <td>               </td>
+        <td th:text="${vwap}"</td>
+        <td>               </td>
+        <td th:text="${volume}"</td>
+    </tr>
+</table>
+
+
+</body>
+</html>
